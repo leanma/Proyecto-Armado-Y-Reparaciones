@@ -1,0 +1,18 @@
+Una empresa que se dedica al armado y reparación de PCs, 
+necesita actualizar sus existencias de componentes. Para ello, le encargó desarrollar un sistema que realice dicha actualización.
+La estructura del archivo binario de Componentes (Componentes.dat) es la sig:
+   codigo: Texto(20), descripcion: Texto(50), stock: Entero, precioUnitario: Real
+Los componentes se actualizan en base a un archivo txt donde se registran los armados y reparaciones efectuadas, 
+donde se detallan los códigos, las cantidades y el precio unitario de los componentes utilizados en cada operación.
+La estructura del archivo de Armados y Reparaciones (ArmadosYReparaciones.txt) es la sig:
+    nroOp: Entero, codigo: Texto(20), cantidad: Entero, precioUnitario: Real
+Es un archivo de texto de campos de longitud variable, separados por el carácter ‘|’.
+El sistema actualizador correrá todas las noches, luego del cierre de la empresa. 
+Deberá desarrollar las funciones que se le indiquen, pudiendo utilizar éstas cualquier función que también deberá desarrollar. Todas sus funciones deben terminar con el sufijo _ALU.
+Al archivo de Componentes debe accederse en forma directa a través de un índice. 
+El índice existe como un archivo binario que tiene el mismo nombre que el archivo de Componentes, pero su extensión es idx. Ud. deberá cargar este archivo de índices en un vector generado con memoria dinámica.
+El tamaño que se espera que tenga a futuro el archivo de Componentes, hace inviable su carga en memoria.
+Sí debe cargar en memoria el archivo de Armados y Reparaciones, en un vector generado con memoria dinámica. 
+En el vector debe quedar un elemento por cada código de componente. Cuando haya que insertar un elemento que ya existe, debe actualizar la cantidad del que ya existe, con la cantidad del nuevo. 
+Y reemplazar el precio por el del nuevo.
+
